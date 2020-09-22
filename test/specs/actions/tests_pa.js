@@ -10,7 +10,7 @@ class TestsSahiproActions{
         browser.url('https://www.google.com/');
         page.googleSearchField.waitForDisplayed(2000);
         page.googleSearchField.setValue(searchRequest);
-        browser.keys('Enter');
+        browser.keys('Enter');        
     }
 
     chooseSearchResult(){
@@ -18,9 +18,11 @@ class TestsSahiproActions{
         page.sahiProLink.click();
     }
 
-    clickFeaturesLink(){
-        page.featuresLink.waitForDisplayed(2000);
-        page.featuresLink.click();
+
+
+    clickTheTopLink(){
+       page.topLink.waitForDisplayed(2000);
+        page.topLink.click();
     }
 
 
@@ -46,16 +48,13 @@ class TestsSahiproActions{
 
 
     getSalesEmail(){
-        
         return page.salesEmail.getText();
 }
     getSupportEmail(){
-        
         return page.supportEmail.getText();
 }
 
     getPhone(){
-        
         return page.phone.getText();
     }
 
@@ -88,7 +87,7 @@ class TestsSahiproActions{
             iconsColors[4].push(page.checkWebAplicationInChromiumIconPlan[counter].getCSSProperty('color').parsed.hex)
 
         }
-        return iconsCollor
+        return iconsColors
     }
 }
 module.exports = TestsSahiproActions;

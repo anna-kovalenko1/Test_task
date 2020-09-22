@@ -19,13 +19,10 @@ describe('Automation tests SahiPro', () => {
     it('should find and open sahiPro website', () => {
         pageSteps.searchInGoogle(data.searchRequest);
         pageSteps.chooseSearchResult();
+        pageSteps.clickTheTopLink();
         assert.equal(browser.getTitle(), data.sahiProTitle);
     });
 
-    it('should open top link for the website', () => {
-        pageSteps.clickFeaturesLink();
-        assert.equal( pageSteps.getTextFromFeaturesPageHeadlin(), data.featuresPageHeadline);
-    });
 
     it('should return various information about the company: the sales email, support email, and phone number from the footer', () => {
         pageSteps.scrollToFooter();
