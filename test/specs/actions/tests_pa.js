@@ -88,7 +88,7 @@ class TestsSahiproActions{
             iconsColors[4].push(page.checkWebAplicationInChromiumIconPlan[counter].getCSSProperty('color').parsed.hex)
 
         }
-        return iconsCollor
+        return iconsColor
     }
 }
 module.exports = TestsSahiproActions;
