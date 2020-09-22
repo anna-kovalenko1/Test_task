@@ -61,7 +61,11 @@ describe('Automation tests SahiPro', () => {
 
   
  it('should have different possibilities for the different plans', () => {
-   
+     pageSteps.chooseTypeOfLicense(userLicense);
+     assert.equal( pageSteps.checkPlansPossibilities(data.expectedPlansPossibilities,sahiProWeb), true);
+     assert.equal( pageSteps.checkPlansPossibilities(data.expectedPlansPossibilities,sahiProDesktop), true);
+     assert.equal( pageSteps.checkPlansPossibilities(data.expectedPlansPossibilities,sahiProMobile), true);
+     assert.equal( pageSteps.checkPlansPossibilities(data.expectedPlansPossibilities,sahiProSAP), true);
     });
 
         
