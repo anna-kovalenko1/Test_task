@@ -1,8 +1,7 @@
 class TestsSahiproPage{
     get googleSearchField() {return $('//input[@name = "q"]')} 
-    get sahiProLink() {return $('//h3[contains(text(),"Sahi Pro | Test Automation for Web, Web services,")]')};
-    get featuresLink() {return $('//a[@href = "https://sahipro.com/features/"]')}
-    get featuresPageHeadline() {return $('//em[contains(text(),"Sahi Pro Features")]')}
+    get sahiProLink() {return $('//h3[contains(text(),"Sahi Pro vs Selenium | Sahi Pro - Accomplish automation with ...")]')};
+    get topLink() {return $(`.site-logo.resp-hide.m-logo`)};
     get pricingLink() {return $('//a[@href = "https://sahipro.com/pricing/"]')}
     get prices() {return $$('b')}
     get pricingPageHeadline() {return $('//em[contains(text(), "Pricing")]')}
