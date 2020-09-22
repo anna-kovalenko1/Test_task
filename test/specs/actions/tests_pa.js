@@ -59,11 +59,6 @@ class TestsSahiproActions{
         return page.phone.getText();
 }
 
-
-    getPricingHeadline(){
-        return page.pricingPageHeadline.getText();
-    }
-
     chooseTypeOfLicense(typeOfLicense){
         page.typeOfLicense[typeOfLicense].waitForDisplayed(2000);
         page.typeOfLicense[typeOfLicense].click();
