@@ -1,4 +1,4 @@
-I am using https://webdriver.io/
+I am using **WebdriverIO** https://webdriver.io/
 
 Folder **specs** contains tests, page objects and folder **actions** with page actions. 
 
