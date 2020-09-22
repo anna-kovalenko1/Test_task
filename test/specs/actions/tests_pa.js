@@ -57,11 +57,6 @@ class TestsSahiproActions{
     getPhone(){
         
         return page.phone.getText();
-}
-
-
-    getPricingHeadline(){
-        return page.pricingPageHeadline.getText();
     }
 
     chooseTypeOfLicense(typeOfLicense){
@@ -69,13 +64,31 @@ class TestsSahiproActions{
         page.typeOfLicense[typeOfLicense].click();
     }
 
-
     getPrices(selectDrivers){    
         return page.prices[selectDrivers].getText();
     }
 
-   
+    checkPlansPossibilities(expectedPlansPossibilities,plan){
+        const tempIconsColorsArr = this.getIconsColorsArray()
+        for(let count = 0; count<tempIconsColorsArr.length; count++){
+            if(tempIconsColorsArr[count][plan] !== expectedPlansPossibilities[count][plan]){
+                return false
+            }
+        }
+        return true
+    }
 
+    getIconsColorsArray(){
+        let iconsColors = [[],[],[],[],[]]
+        for(let counter = 0; counter<4; counter++){
+            iconsColors[0].push(page.checkDatabaseIconPlan[counter].getCSSProperty('color').parsed.hex)
+            iconsColors[1].push(page.checkFilesystemIconPlan[counter].getCSSProperty('color').parsed.hex)
+            iconsColors[2].push(page.checkWebAplicationAcrossIconPlan[counter].getCSSProperty('color').parsed.hex)
+            iconsColors[3].push(page.checkWebAplicationOnMobileIconPlan[counter].getCSSProperty('color').parsed.hex)
+            iconsColors[4].push(page.checkWebAplicationInChromiumIconPlan[counter].getCSSProperty('color').parsed.hex)
 
+        }
+        return iconsCollor
+    }
 }
 module.exports = TestsSahiproActions;
