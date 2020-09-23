@@ -1,6 +1,6 @@
 I am using **WebdriverIO** https://webdriver.io/
 
-Folder **specs** contains tests, page objects and folder **actions** with page actions. 
+Folder **specs** contains tests, page objects and page actions. 
 
 
 
