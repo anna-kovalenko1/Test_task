@@ -1,5 +1,4 @@
 class TestsSahiproPage{
-    get googleSearchField() {return $('//input[@name = "q"]')} 
     get sahiProLink() {return $('//h3[contains(text(),"Sahi Pro vs Selenium | Sahi Pro - Accomplish automation with ...")]')};
     get topLink() {return $(`.site-logo.resp-hide.m-logo`)};
     get pricingLink() {return $('//a[@href = "https://sahipro.com/pricing/"]')}

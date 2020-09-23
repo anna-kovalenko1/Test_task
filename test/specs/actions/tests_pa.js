@@ -4,14 +4,8 @@ const TestsSahiproPage = require('../page/tests_po')
 const page = new TestsSahiproPage();
 
 class TestsSahiproActions{
-
-    searchInGoogle(searchRequest){
-        browser.maximizeWindow();
-        browser.url('https://www.google.com/');
-        page.googleSearchField.waitForDisplayed(2000);
-        page.googleSearchField.setValue(searchRequest);
-        browser.keys('Enter');        
-    }
+    
+ 
 
     chooseSearchResult(){
         page.sahiProLink.scrollIntoView();
