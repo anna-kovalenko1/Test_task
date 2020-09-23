@@ -1,7 +1,10 @@
 const TestsSahiproActions = require('./actions/tests_pa');
+const GoogleSearchActions = require('./googleSearch/page/googleSearch_pa');
 const data = require('../../testData.json');
 
+
 const assert = require('assert');
+const googleSearchSteps = new GoogleSearchActions();
 const pageSteps = new TestsSahiproActions();
 
 describe('Automation tests SahiPro', () => {
@@ -17,7 +20,7 @@ describe('Automation tests SahiPro', () => {
     let previousPrice = 0
 
     it('should find and open sahiPro website', () => {
-        pageSteps.searchInGoogle(data.searchRequest);
+        googleSearchSteps.searchInGoogle(data.searchRequest);
         pageSteps.chooseSearchResult();
         pageSteps.clickTheTopLink();
         assert.equal(browser.getTitle(), data.sahiProTitle);
